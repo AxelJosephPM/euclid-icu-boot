@@ -67,7 +67,7 @@ euclid-icu-boot/
 
 ## Alcance y uso
 
-Este repositorio es proyecto de caracter educativo y no corresponde al software de la misión real.
+Este repositorio es un proyecto de caracter educativo y no corresponde al software de la misión real.
 
 ---
 
