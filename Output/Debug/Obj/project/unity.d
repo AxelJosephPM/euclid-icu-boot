@@ -1,0 +1,14 @@
+Output/Debug/Obj/project/unity.o: /home/axel/psa/prac3/Source/unity.c \
+  /home/axel/psa/prac3/Source/unity.h \
+  /home/axel/psa/prac3/Source/unity_internals.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/setjmp.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_ConfDefaults.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Conf.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Arm_Conf.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/math.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_FP.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/stddef.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/stdint.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/limits.h \
+  /opt/SEGGER/segger_embedded_studio_8.22a/include/stdio.h

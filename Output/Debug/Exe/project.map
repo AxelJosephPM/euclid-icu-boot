@@ -1,0 +1,735 @@
+***********************************************************************************************
+***                                                                                         ***
+***                                    LINK INFORMATION                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Linker version:
+
+  SEGGER ARM Linker 4.44.1 compiled Dec 19 2024 18:36:21
+  Copyright (c) 2017-2024 SEGGER Microcontroller GmbH    www.segger.com
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     MODULE SUMMARY                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory use by input file:
+
+  Object File                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Cortex_M_Startup.o                                     58          64                        
+  isocheck.o                                            162                                    
+  it_tcmd_test.o                                      1 540       1 377                        
+  main.o                                                 64                               6 292
+  milbus.o                                              274                              16 424
+  SEGGER_THUMB_Startup.o                                 20                                    
+  systick.o                                             238                                    
+  tc_acceptance.o                                       462                               1 045
+  tc_queue.o                                            392                                    
+  unity.o                                             1 902         226                      84
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (10 objects)                               5 112       1 667                  23 845
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  libc_v7em_t_le_eabi_balanced.a                        122                                    
+  prinops_rtt_v7em_t_le_eabi_balanced.a                 484          26          12       1 220
+  SEGGER_crtinit_v7em_t_le_eabi_balanced.a               38                                    
+  strops_unaligned_v7em_t_le_eabi_balanced.a            196                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (4 archives)                                 840          26          12       1 220
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Linker created (shared data, fills, blocks):                       44                   2 048
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              5 952       1 737          12      27 113
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by archive member:
+
+  Archive member                                    RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  fileops.o (libc_v7em_t_le_eabi_balanced.a)             94                                    
+  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+                                                         28                                    
+  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+                                                         62                      12          12
+  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+                                                         38                                    
+  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+                                                        422          26                   1 208
+  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+                                                        196                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (6 members from 4 archives)                  840          26          12       1 220
+  Objects (10 files)                                  5 112       1 667                  23 845
+  Linker created (shared data, fills, blocks):                       44                   2 048
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              5 952       1 737          12      27 113
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by linker:
+
+  Description                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Initialization table                                               44                        
+  Memory for block 'stack'                                                                2 048
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (linker created):                                         44                   2 048
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Objects (10 files)                                  5 112       1 667                  23 845
+  Archives (4 files)                                    840          26          12       1 220
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              5 952       1 737          12      27 113
+  =============================================  ==========  ==========  ==========  ==========
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     SECTION DETAIL                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Sections by address:
+
+  Range              Symbol or [section] Name         Size  Al  Init  Ac  Object File
+  -----------------  -------------------------  ----------  --  ----  --  -----------
+  00000000-0000003f  _vectors                           64   4  Cnst  RO  Cortex_M_Startup.o
+  00000040-000000df  it_tcmd_090_run_part22            160   4  Code  RX  it_tcmd_test.o
+  000000e0-00000193  it_tcmd_090_run                   180   4  Code  RX  it_tcmd_test.o
+  00000194-000001d7  it_tcmd_090_check                  68   4  Code  RX  it_tcmd_test.o
+  000001d8-00000217  main                               64   4  Code  RX  main.o
+  00000218-000002af  receive_msg_from_milbus           152   4  Code  RX  milbus.o
+  000002b0-000002e3  systick_set_control                52   4  Code  RX  systick.o
+  000002e4-000002fb  systick_set_reload                 24   4  Code  RX  systick.o
+  000002fc-00000343  check_and_extract_tc_item          72   4  Code  RX  tc_acceptance.o
+  00000344-000003ab  tc_execute                        104   4  Code  RX  tc_acceptance.o
+  000003ac-00000443  tc_queue_insert_item              152   4  Code  RX  tc_queue.o
+  00000444-000004c7  tc_queue_extract_item             132   4  Code  RX  tc_queue.o
+  000004c8-0000052b  UnityPrintNumberHex               100   4  Code  RX  unity.o
+  0000052c-000005df  UnityPrintNumberByStyle           180   4  Code  RX  unity.o
+  000005e0-00000607  UnityPrintNumber                   40   4  Code  RX  unity.o
+  00000608-00000667  UnityPrintNumberUnsigned           96   4  Code  RX  unity.o
+  00000668-000006d3  UnityConcludeTest                 108   4  Code  RX  unity.o
+  000006d4-000006ff  UnityTestResultsFailBegin          44   4  Code  RX  unity.o
+  00000700-00000773  UnityAddMsgIfSpecified            116   4  Code  RX  unity.o
+  00000774-00000807  UnityAssertEqualNumber            148   4  Code  RX  unity.o
+  00000808-000009e7  UnityAssertEqualIntArray          480   4  Code  RX  unity.o
+  000009e8-00000a4f  UnityIsOneArrayNull               104   4  Code  RX  unity.o
+  00000a50-00000a77  UnityBegin                         40   4  Code  RX  unity.o
+  00000a78-00000b13  UnityEnd                          156   4  Code  RX  unity.o
+  00000b14-00000b3b  HardFault_Handler                  40   4  Code  RX  Cortex_M_Startup.o
+  00000b3c-00000b4f  _start                             20   4  Code  RX  SEGGER_THUMB_Startup.o
+  00000b50-00000b5b  setjmp                             12   4  Code  RX  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  00000b5c-00000b6b  longjmp                            16   4  Code  RX  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  00000b6c-00000bc7  memcpy                             92   4  Code  RX  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  00000bc8-00000c2f  __aeabi_memclr                    104   4  Code  RX  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  00000c30-00000cd1  calculate_iso_checksum            162   4  Code  RX  isocheck.o
+  00000cd2-00000cd3  NMI_Handler                         2   2  Code  RX  Cortex_M_Startup.o
+  00000cd4-00000e15  it_tcmd_090_run_part11            322   4  Code  RX  it_tcmd_test.o
+  00000e16-00000e23  putchar                            14   2  Code  RX  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  00000e24-00000ee9  it_tcmd_090_run_part12            198   4  Code  RX  it_tcmd_test.o
+  00000eea-00000f0b  fputc                              34   2  Code  RX  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  00000f0c-0000102d  it_tcmd_090_run_part21            290   4  Code  RX  it_tcmd_test.o
+  0000102e-0000105b  fwrite                             46   2  Code  RX  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  0000105c-0000119d  it_tcmd_090_check_funcs           322   4  Code  RX  it_tcmd_test.o
+  0000119e-000011a3  __SEGGER_RTL_X_file_write           6   2  Code  RX  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  000011a4-0000121d  send_msg_to_milbus                122   4  Code  RX  milbus.o
+  0000121e-00001283  _DoInit                           102   2  Code  RX  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  00001284-00001325  SysTick_Handler                   162   4  Code  RX  systick.o
+  00001326-0000133b  _GetAvailWriteSpace                22   2  Code  RX  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0000133c-00001459  check_tc_acceptance               286   4  Code  RX  tc_acceptance.o
+  0000145a-000014af  _WriteBlocking                     86   2  Code  RX  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  000014b0-000014d1  tc_queue_is_empty                  34   4  Code  RX  tc_queue.o
+  000014d2-0000152b  SEGGER_RTT_WriteNoLock             90   2  Code  RX  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0000152c-00001575  tc_queue_is_full                   74   4  Code  RX  tc_queue.o
+  00001576-000015ab  SEGGER_RTT_Write                   54   2  Code  RX  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  000015ac-000015ad  setUp                               2   4  Code  RX  unity.o
+  000015ae-00001997  [.rodata..L__const.it_tcmd_090_run_part11.tc2]
+                                                     1 002   1  Cnst  RO  it_tcmd_test.o
+  00001998-000019bd  UnityPrint                         38   4  Code  RX  unity.o
+  000019be-000019c3  UnityStrWas                         6   1  Cnst  RO  unity.o
+  000019c4-00001a29  UnityPrintChar                    102   4  Code  RX  unity.o
+  00001a2a-00001a33  UnityStrElement                    10   1  Cnst  RO  unity.o
+  00001a34-00001a6d  UnityTestResultsBegin              58   4  Code  RX  unity.o
+  00001a6e-00001a77  UnityStrDetail1Name                10   1  Cnst  RO  unity.o
+  00001a78-00001ad1  UnityDefaultTestRun                90   4  Code  RX  unity.o
+  00001ad2-00001adb  UnityStrResultsIgnored             10   1  Cnst  RO  unity.o
+  00001adc-00001aeb  Reset_Handler                      16   2  Code  RX  Cortex_M_Startup.o
+  00001aec-00001b23  __SEGGER_RTL_X_file_stat           56   2  Code  RX  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  00001b24-00001b67  _WriteNoCheck                      68   2  Code  RX  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  00001b68-00001b92  [.rodata..L.str.3]                 43   1  Cnst  RO  it_tcmd_test.o
+  00001b93-00001ba9  [.rodata..L.str.4]                 23   1  Cnst  RO  it_tcmd_test.o
+  00001baa-00001bc0  [.rodata..L.str.5]                 23   1  Cnst  RO  it_tcmd_test.o
+  00001bc1-00001bd7  [.rodata..L.str.6]                 23   1  Cnst  RO  it_tcmd_test.o
+  00001bd8-00001bee  [.rodata..L.str.7]                 23   1  Cnst  RO  it_tcmd_test.o
+  00001bef-00001bf1  UnityStrOk                          3   1  Cnst  RO  unity.o
+  00001bf2-00001bfc  UnityStrExpected                   11   1  Cnst  RO  unity.o
+  00001bfd-00001c33  UnityStrPointless                  55   1  Cnst  RO  unity.o
+  00001c34-00001c3e  UnityStrDetail2Name                11   1  Cnst  RO  unity.o
+  00001c3f-00001c41  UnityStrSpacer                      3   1  Cnst  RO  unity.o
+  00001c42-00001c4c  UnityStrResultsFailures            11   1  Cnst  RO  unity.o
+  00001c4d-00001c51  UnityStrPass                        5   1  Cnst  RO  unity.o
+  00001c52-00001c56  UnityStrFail                        5   1  Cnst  RO  unity.o
+  00001c57-00001c73  UnityStrNullPointerForExpected
+                                                        29   1  Cnst  RO  unity.o
+  00001c74-00001c8c  UnityStrNullPointerForActual
+                                                        25   1  Cnst  RO  unity.o
+  00001c8d-00001c9d  _DoInit._aInitStr                  17   1  Cnst  RO  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  00001c9e-00001ca6  [.rodata.libc..L.str]               9   1  Cnst  RO  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  00001ca7-00001cee  [.rodata..L.str]                   72   1  Cnst  RO  it_tcmd_test.o
+  00001cef-00001d36  [.rodata..L.str.1]                 72   1  Cnst  RO  it_tcmd_test.o
+  00001d37-00001d7e  [.rodata..L.str.2]                 72   1  Cnst  RO  it_tcmd_test.o
+  00001d7f-00001d96  [.rodata..L.str.8]                 24   1  Cnst  RO  it_tcmd_test.o
+  00001d97-00001dae  UnityStrBreaker                    24   1  Cnst  RO  unity.o
+  00001daf-00001db6  UnityStrResultsTests                8   1  Cnst  RO  unity.o
+  00001db7-00001db7  ( UNUSED .=.+1 )                    1   -  ----  -   -
+  00001db8-00001dd7  __SEGGER_init_table__              32   4  Cnst  RO  [ Linker created ]
+  00001dd8-00001de3  __SEGGER_init_data__               12   4  Cnst  RO  [ Linker created ]
+  00001de4-00001df5  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  00001df6-00001e09  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  00001e0a-1ffeffff  ( UNUSED .=.+536797686 )   536 797 686
+                                                             -  ----  -   -
+  1fff0000-1fff187f  tc_queue                        6 272   4  Zero  ZI  main.o
+  1fff1880-1fff1927  _SEGGER_RTT                       168   4  Zero  ZI  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff1928-1fff197b  Unity                              84   4  Zero  ZI  unity.o
+  1fff197c-1fff197f  tc_size                             4   4  Zero  ZI  tc_acceptance.o
+  1fff1980-1fff1983  rejected_tc_cnt                     4   4  Zero  ZI  main.o
+  1fff1984-1fff1987  receive_msg_from_milbus.milbus_msgs_received_index
+                                                         4   4  Zero  ZI  milbus.o
+  1fff1988-1fff198b  milbus_msgs_sent_index              4   4  Zero  ZI  milbus.o
+  1fff198c-1fff198f  major_frame_cnt                     4   4  Zero  ZI  main.o
+  1fff1990-1fff1993  __SEGGER_RTL_stdout_file            4   4  Zero  ZI  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff1994-1fff1997  __SEGGER_RTL_stdin_file             4   4  Zero  ZI  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff1998-1fff199b  __SEGGER_RTL_stderr_file            4   4  Zero  ZI  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff199c-1fff199f  executed_tc_cnt                     4   4  Zero  ZI  main.o
+  1fff19a0-1fff19a3  comm_frame_cnt                      4   4  Zero  ZI  main.o
+  1fff19a4-1fff19a7  accepted_tc_cnt                     4   4  Zero  ZI  main.o
+  1fff19a8-1fff19c7  milbus_msgs_len                    32   2  Zero  ZI  milbus.o
+  1fff19c8-1fff59c7  milbus_msgs_data               16 384   1  Zero  ZI  milbus.o
+  1fff59c8-1fff5dd7  incoming_tc                     1 040   1  Zero  ZI  tc_acceptance.o
+  1fff5dd8-1fff61d7  _acUpBuffer                     1 024   1  Zero  ZI  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff61d8-1fff61e7  _acDownBuffer                      16   1  Zero  ZI  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff61e8-1fff61e8  execution_allowed                   1   1  Zero  ZI  tc_acceptance.o
+  1fff61e9-1fff61eb  ( UNUSED .=.+3 )                    3   -  ----  -   -
+  1fff61ec-1fff61ef  stdout                              4   4  Init  RW  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff61f0-1fff61f3  stdin                               4   4  Init  RW  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff61f4-1fff61f7  stderr                              4   4  Init  RW  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  1fff61f8-2002f7ff  ( UNUSED .=.+235016 )         235 016   -  ----  -   -
+  2002f800-2002ffff  [.bss.block.stack]              2 048   8  None  ZI  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                       SYMBOL LIST                                       ***
+***                                                                                         ***
+***********************************************************************************************
+
+Weak symbols with no definition:
+
+  Symbol name
+  -------------------------
+  SystemInit
+
+Function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  BusFault_Handler           0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  DebugMon_Handler           0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  HardFault_Handler          0x00000B15          36      4  Code  Wk  Cortex_M_Startup.o
+  MemManage_Handler          0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  NMI_Handler                0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  PendSV_Handler             0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  Reset_Handler              0x00001ADD          16      2  Code  Gb  Cortex_M_Startup.o
+  SEGGER_RTT_Write           0x00001577          54      2  Code  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  SEGGER_RTT_WriteNoLock     0x000014D3          90      2  Code  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  SVC_Handler                0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  SysTick_Handler            0x00001285         162      4  Code  Gb  systick.o
+  UnityAddMsgIfSpecified     0x00000701         116      4  Code  Lc  unity.o
+  UnityAssertEqualIntArray   0x00000809         480      4  Code  Gb  unity.o
+  UnityAssertEqualNumber     0x00000775         148      4  Code  Gb  unity.o
+  UnityBegin                 0x00000A51          40      4  Code  Gb  unity.o
+  UnityConcludeTest          0x00000669         108      4  Code  Gb  unity.o
+  UnityDefaultTestRun        0x00001A79          90      4  Code  Gb  unity.o
+  UnityEnd                   0x00000A79         156      4  Code  Gb  unity.o
+  UnityIsOneArrayNull        0x000009E9         104      4  Code  Lc  unity.o
+  UnityPrint                 0x00001999          38      4  Code  Gb  unity.o
+  UnityPrintChar             0x000019C5         102      4  Code  Lc  unity.o
+  UnityPrintNumber           0x000005E1          40      4  Code  Gb  unity.o
+  UnityPrintNumberByStyle    0x0000052D         180      4  Code  Gb  unity.o
+  UnityPrintNumberHex        0x000004C9         100      4  Code  Gb  unity.o
+  UnityPrintNumberUnsigned   0x00000609          96      4  Code  Gb  unity.o
+  UnityTestResultsBegin      0x00001A35          58      4  Code  Lc  unity.o
+  UnityTestResultsFailBegin  0x000006D5          44      4  Code  Lc  unity.o
+  UsageFault_Handler         0x00000CD3           2      2  Code  Wk  Cortex_M_Startup.o
+  _DoInit                    0x0000121F         102      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  _GetAvailWriteSpace        0x00001327          22      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  _WriteBlocking             0x0000145B          86      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  _WriteNoCheck              0x00001B25          68      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_X_file_stat   0x00001AED          56      2  Code  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_X_file_write  0x0000119F           6      2  Code  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_init_copy         0x00001DF7          20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  __SEGGER_init_done         0x00000B47                  4  Code  Gb  SEGGER_THUMB_Startup.o
+  __SEGGER_init_zero         0x00001DE5          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  __aeabi_memclr             0x00000BC9         104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memclr4            0x00000BC9                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memclr8            0x00000BC9                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memcpy             0x00000B6D                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memcpy4            0x00000B8B                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memcpy8            0x00000B8B                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memset             0x00000BCB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memset4            0x00000BCB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memset8            0x00000BCB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __startup_complete         0x00000B47                  4  Code  Gb  SEGGER_THUMB_Startup.o
+  _start                     0x00000B3D          14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  calculate_iso_checksum     0x00000C31         162      4  Code  Gb  isocheck.o
+  check_and_extract_tc_item  0x000002FD          72      4  Code  Gb  tc_acceptance.o
+  check_tc_acceptance        0x0000133D         286      4  Code  Gb  tc_acceptance.o
+  exit                       0x00000B4B           2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  fputc                      0x00000EEB          34      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  fwrite                     0x0000102F          46      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  it_tcmd_090_check          0x00000195          68      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_check_funcs    0x0000105D         322      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run            0x000000E1         180      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run_part11     0x00000CD5         322      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run_part12     0x00000E25         198      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run_part21     0x00000F0D         290      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run_part22     0x00000041         160      4  Code  Gb  it_tcmd_test.o
+  longjmp                    0x00000B5D          14      4  Code  Wk  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  main                       0x000001D9          64      4  Code  Gb  main.o
+  memcpy                     0x00000B6D          92      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  memset                     0x00000BD1                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  putchar                    0x00000E17          14      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  receive_msg_from_milbus    0x00000219         152      4  Code  Gb  milbus.o
+  reset_handler              0x00001ADD          16      2  Code  Gb  Cortex_M_Startup.o
+  send_msg_to_milbus         0x000011A5         122      4  Code  Gb  milbus.o
+  setUp                      0x000015AD           2      4  Code  Gb  unity.o
+  setjmp                     0x00000B51          10      4  Code  Wk  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  systick_set_control        0x000002B1          52      4  Code  Gb  systick.o
+  systick_set_reload         0x000002E5          24      4  Code  Gb  systick.o
+  tc_execute                 0x00000345         104      4  Code  Gb  tc_acceptance.o
+  tc_queue_extract_item      0x00000445         132      4  Code  Gb  tc_queue.o
+  tc_queue_insert_item       0x000003AD         152      4  Code  Gb  tc_queue.o
+  tc_queue_is_empty          0x000014B1          34      4  Code  Gb  tc_queue.o
+  tc_queue_is_full           0x0000152D          74      4  Code  Gb  tc_queue.o
+  tearDown                   0x000015AD           2      4  Code  Gb  unity.o
+
+Function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000041  it_tcmd_090_run_part22            160      4  Code  Gb  it_tcmd_test.o
+  0x000000E1  it_tcmd_090_run                   180      4  Code  Gb  it_tcmd_test.o
+  0x00000195  it_tcmd_090_check                  68      4  Code  Gb  it_tcmd_test.o
+  0x000001D9  main                               64      4  Code  Gb  main.o
+  0x00000219  receive_msg_from_milbus           152      4  Code  Gb  milbus.o
+  0x000002B1  systick_set_control                52      4  Code  Gb  systick.o
+  0x000002E5  systick_set_reload                 24      4  Code  Gb  systick.o
+  0x000002FD  check_and_extract_tc_item          72      4  Code  Gb  tc_acceptance.o
+  0x00000345  tc_execute                        104      4  Code  Gb  tc_acceptance.o
+  0x000003AD  tc_queue_insert_item              152      4  Code  Gb  tc_queue.o
+  0x00000445  tc_queue_extract_item             132      4  Code  Gb  tc_queue.o
+  0x000004C9  UnityPrintNumberHex               100      4  Code  Gb  unity.o
+  0x0000052D  UnityPrintNumberByStyle           180      4  Code  Gb  unity.o
+  0x000005E1  UnityPrintNumber                   40      4  Code  Gb  unity.o
+  0x00000609  UnityPrintNumberUnsigned           96      4  Code  Gb  unity.o
+  0x00000669  UnityConcludeTest                 108      4  Code  Gb  unity.o
+  0x000006D5  UnityTestResultsFailBegin          44      4  Code  Lc  unity.o
+  0x00000701  UnityAddMsgIfSpecified            116      4  Code  Lc  unity.o
+  0x00000775  UnityAssertEqualNumber            148      4  Code  Gb  unity.o
+  0x00000809  UnityAssertEqualIntArray          480      4  Code  Gb  unity.o
+  0x000009E9  UnityIsOneArrayNull               104      4  Code  Lc  unity.o
+  0x00000A51  UnityBegin                         40      4  Code  Gb  unity.o
+  0x00000A79  UnityEnd                          156      4  Code  Gb  unity.o
+  0x00000B15  HardFault_Handler                  36      4  Code  Wk  Cortex_M_Startup.o
+  0x00000B3D  _start                             14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x00000B47  __startup_complete                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x00000B47  __SEGGER_init_done                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x00000B4B  exit                                2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x00000B51  setjmp                             10      4  Code  Wk  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  0x00000B5D  longjmp                            14      4  Code  Wk  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  0x00000B6D  memcpy                             92      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000B6D  __aeabi_memcpy                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000B8B  __aeabi_memcpy8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000B8B  __aeabi_memcpy4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BC9  __aeabi_memclr8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BC9  __aeabi_memclr4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BC9  __aeabi_memclr                    104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BCB  __aeabi_memset8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BCB  __aeabi_memset4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BCB  __aeabi_memset                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000BD1  memset                                     4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  0x00000C31  calculate_iso_checksum            162      4  Code  Gb  isocheck.o
+  0x00000CD3  UsageFault_Handler                  2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD3  SVC_Handler                         2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD3  PendSV_Handler                      2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD3  NMI_Handler                         2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD3  MemManage_Handler                   2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD3  DebugMon_Handler                    2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD3  BusFault_Handler                    2      2  Code  Wk  Cortex_M_Startup.o
+  0x00000CD5  it_tcmd_090_run_part11            322      4  Code  Gb  it_tcmd_test.o
+  0x00000E17  putchar                            14      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  0x00000E25  it_tcmd_090_run_part12            198      4  Code  Gb  it_tcmd_test.o
+  0x00000EEB  fputc                              34      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  0x00000F0D  it_tcmd_090_run_part21            290      4  Code  Gb  it_tcmd_test.o
+  0x0000102F  fwrite                             46      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  0x0000105D  it_tcmd_090_check_funcs           322      4  Code  Gb  it_tcmd_test.o
+  0x0000119F  __SEGGER_RTL_X_file_write           6      2  Code  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x000011A5  send_msg_to_milbus                122      4  Code  Gb  milbus.o
+  0x0000121F  _DoInit                           102      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x00001285  SysTick_Handler                   162      4  Code  Gb  systick.o
+  0x00001327  _GetAvailWriteSpace                22      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x0000133D  check_tc_acceptance               286      4  Code  Gb  tc_acceptance.o
+  0x0000145B  _WriteBlocking                     86      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x000014B1  tc_queue_is_empty                  34      4  Code  Gb  tc_queue.o
+  0x000014D3  SEGGER_RTT_WriteNoLock             90      2  Code  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x0000152D  tc_queue_is_full                   74      4  Code  Gb  tc_queue.o
+  0x00001577  SEGGER_RTT_Write                   54      2  Code  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x000015AD  tearDown                            2      4  Code  Gb  unity.o
+  0x000015AD  setUp                               2      4  Code  Gb  unity.o
+  0x00001999  UnityPrint                         38      4  Code  Gb  unity.o
+  0x000019C5  UnityPrintChar                    102      4  Code  Lc  unity.o
+  0x00001A35  UnityTestResultsBegin              58      4  Code  Lc  unity.o
+  0x00001A79  UnityDefaultTestRun                90      4  Code  Gb  unity.o
+  0x00001ADD  reset_handler                      16      2  Code  Gb  Cortex_M_Startup.o
+  0x00001ADD  Reset_Handler                      16      2  Code  Gb  Cortex_M_Startup.o
+  0x00001AED  __SEGGER_RTL_X_file_stat           56      2  Code  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x00001B25  _WriteNoCheck                      68      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x00001DE5  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  0x00001DF7  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+
+Function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  UnityAssertEqualIntArray          480      4  Code  Gb  unity.o
+  it_tcmd_090_check_funcs           322      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run_part11            322      4  Code  Gb  it_tcmd_test.o
+  it_tcmd_090_run_part21            290      4  Code  Gb  it_tcmd_test.o
+  check_tc_acceptance               286      4  Code  Gb  tc_acceptance.o
+  it_tcmd_090_run_part12            198      4  Code  Gb  it_tcmd_test.o
+  UnityPrintNumberByStyle           180      4  Code  Gb  unity.o
+  it_tcmd_090_run                   180      4  Code  Gb  it_tcmd_test.o
+  SysTick_Handler                   162      4  Code  Gb  systick.o
+  calculate_iso_checksum            162      4  Code  Gb  isocheck.o
+  it_tcmd_090_run_part22            160      4  Code  Gb  it_tcmd_test.o
+  UnityEnd                          156      4  Code  Gb  unity.o
+  receive_msg_from_milbus           152      4  Code  Gb  milbus.o
+  tc_queue_insert_item              152      4  Code  Gb  tc_queue.o
+  UnityAssertEqualNumber            148      4  Code  Gb  unity.o
+  tc_queue_extract_item             132      4  Code  Gb  tc_queue.o
+  send_msg_to_milbus                122      4  Code  Gb  milbus.o
+  UnityAddMsgIfSpecified            116      4  Code  Lc  unity.o
+  UnityConcludeTest                 108      4  Code  Gb  unity.o
+  UnityIsOneArrayNull               104      4  Code  Lc  unity.o
+  __aeabi_memclr                    104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  tc_execute                        104      4  Code  Gb  tc_acceptance.o
+  UnityPrintChar                    102      4  Code  Lc  unity.o
+  _DoInit                           102      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  UnityPrintNumberHex               100      4  Code  Gb  unity.o
+  UnityPrintNumberUnsigned           96      4  Code  Gb  unity.o
+  memcpy                             92      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  SEGGER_RTT_WriteNoLock             90      2  Code  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  UnityDefaultTestRun                90      4  Code  Gb  unity.o
+  _WriteBlocking                     86      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  tc_queue_is_full                   74      4  Code  Gb  tc_queue.o
+  check_and_extract_tc_item          72      4  Code  Gb  tc_acceptance.o
+  _WriteNoCheck                      68      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  it_tcmd_090_check                  68      4  Code  Gb  it_tcmd_test.o
+  main                               64      4  Code  Gb  main.o
+  UnityTestResultsBegin              58      4  Code  Lc  unity.o
+  __SEGGER_RTL_X_file_stat           56      2  Code  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  SEGGER_RTT_Write                   54      2  Code  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  systick_set_control                52      4  Code  Gb  systick.o
+  fwrite                             46      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  UnityTestResultsFailBegin          44      4  Code  Lc  unity.o
+  UnityBegin                         40      4  Code  Gb  unity.o
+  UnityPrintNumber                   40      4  Code  Gb  unity.o
+  UnityPrint                         38      4  Code  Gb  unity.o
+  HardFault_Handler                  36      4  Code  Wk  Cortex_M_Startup.o
+  fputc                              34      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  tc_queue_is_empty                  34      4  Code  Gb  tc_queue.o
+  systick_set_reload                 24      4  Code  Gb  systick.o
+  _GetAvailWriteSpace                22      2  Code  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_t_le_eabi_balanced.a)
+  Reset_Handler                      16      2  Code  Gb  Cortex_M_Startup.o
+  reset_handler                      16      2  Code  Gb  Cortex_M_Startup.o
+  _start                             14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  longjmp                            14      4  Code  Wk  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  putchar                            14      2  Code  Wk  fileops.o (libc_v7em_t_le_eabi_balanced.a)
+  setjmp                             10      4  Code  Wk  jumpasmops_arm.o (libc_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_X_file_write           6      2  Code  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  BusFault_Handler                    2      2  Code  Wk  Cortex_M_Startup.o
+  DebugMon_Handler                    2      2  Code  Wk  Cortex_M_Startup.o
+  MemManage_Handler                   2      2  Code  Wk  Cortex_M_Startup.o
+  NMI_Handler                         2      2  Code  Wk  Cortex_M_Startup.o
+  PendSV_Handler                      2      2  Code  Wk  Cortex_M_Startup.o
+  SVC_Handler                         2      2  Code  Wk  Cortex_M_Startup.o
+  UsageFault_Handler                  2      2  Code  Wk  Cortex_M_Startup.o
+  exit                                2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  setUp                               2      4  Code  Gb  unity.o
+  tearDown                            2      4  Code  Gb  unity.o
+  __SEGGER_init_done                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  __aeabi_memclr4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memclr8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memcpy                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memcpy4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memcpy8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memset                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memset4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __aeabi_memset8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+  __startup_complete                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  memset                                     4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_t_le_eabi_balanced.a)
+
+Read-write data symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  Unity                      0x1FFF1928          84      4  Zero  Gb  unity.o
+  _SEGGER_RTT                0x1FFF1880         168      4  Zero  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_stderr_file   0x1FFF1998           4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_stdin_file    0x1FFF1994           4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_stdout_file   0x1FFF1990           4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  _acDownBuffer              0x1FFF61D8          16         Zero  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  _acUpBuffer                0x1FFF5DD8       1 024         Zero  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  accepted_tc_cnt            0x1FFF19A4           4      4  Zero  Gb  main.o
+  comm_frame_cnt             0x1FFF19A0           4      4  Zero  Gb  main.o
+  executed_tc_cnt            0x1FFF199C           4      4  Zero  Gb  main.o
+  execution_allowed          0x1FFF61E8           1         Zero  Lc  tc_acceptance.o
+  incoming_tc                0x1FFF59C8       1 040         Zero  Lc  tc_acceptance.o
+  major_frame_cnt            0x1FFF198C           4      4  Zero  Gb  main.o
+  milbus_msgs_data           0x1FFF19C8      16 384         Zero  Lc  milbus.o
+  milbus_msgs_len            0x1FFF19A8          32      2  Zero  Lc  milbus.o
+  milbus_msgs_sent_index     0x1FFF1988           4      4  Zero  Lc  milbus.o
+  receive_msg_from_milbus.milbus_msgs_received_index
+                             0x1FFF1984           4      4  Zero  Lc  milbus.o
+  rejected_tc_cnt            0x1FFF1980           4      4  Zero  Gb  main.o
+  stderr                     0x1FFF61F4           4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  stdin                      0x1FFF61F0           4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  stdout                     0x1FFF61EC           4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  tc_queue                   0x1FFF0000       6 272      4  Zero  Gb  main.o
+  tc_size                    0x1FFF197C           4      4  Zero  Lc  tc_acceptance.o
+
+Read-write data symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x1FFF0000  tc_queue                        6 272      4  Zero  Gb  main.o
+  0x1FFF1880  _SEGGER_RTT                       168      4  Zero  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF1928  Unity                              84      4  Zero  Gb  unity.o
+  0x1FFF197C  tc_size                             4      4  Zero  Lc  tc_acceptance.o
+  0x1FFF1980  rejected_tc_cnt                     4      4  Zero  Gb  main.o
+  0x1FFF1984  receive_msg_from_milbus.milbus_msgs_received_index
+                                                  4      4  Zero  Lc  milbus.o
+  0x1FFF1988  milbus_msgs_sent_index              4      4  Zero  Lc  milbus.o
+  0x1FFF198C  major_frame_cnt                     4      4  Zero  Gb  main.o
+  0x1FFF1990  __SEGGER_RTL_stdout_file            4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF1994  __SEGGER_RTL_stdin_file             4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF1998  __SEGGER_RTL_stderr_file            4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF199C  executed_tc_cnt                     4      4  Zero  Gb  main.o
+  0x1FFF19A0  comm_frame_cnt                      4      4  Zero  Gb  main.o
+  0x1FFF19A4  accepted_tc_cnt                     4      4  Zero  Gb  main.o
+  0x1FFF19A8  milbus_msgs_len                    32      2  Zero  Lc  milbus.o
+  0x1FFF19C8  milbus_msgs_data               16 384         Zero  Lc  milbus.o
+  0x1FFF59C8  incoming_tc                     1 040         Zero  Lc  tc_acceptance.o
+  0x1FFF5DD8  _acUpBuffer                     1 024         Zero  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF61D8  _acDownBuffer                      16         Zero  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF61E8  execution_allowed                   1         Zero  Lc  tc_acceptance.o
+  0x1FFF61EC  stdout                              4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF61F0  stdin                               4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x1FFF61F4  stderr                              4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+
+Read-write data symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  milbus_msgs_data               16 384         Zero  Lc  milbus.o
+  tc_queue                        6 272      4  Zero  Gb  main.o
+  incoming_tc                     1 040         Zero  Lc  tc_acceptance.o
+  _acUpBuffer                     1 024         Zero  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  _SEGGER_RTT                       168      4  Zero  Gb  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  Unity                              84      4  Zero  Gb  unity.o
+  milbus_msgs_len                    32      2  Zero  Lc  milbus.o
+  _acDownBuffer                      16         Zero  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_stderr_file            4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_stdin_file             4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_RTL_stdout_file            4      4  Zero  Lc  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  accepted_tc_cnt                     4      4  Zero  Gb  main.o
+  comm_frame_cnt                      4      4  Zero  Gb  main.o
+  executed_tc_cnt                     4      4  Zero  Gb  main.o
+  major_frame_cnt                     4      4  Zero  Gb  main.o
+  milbus_msgs_sent_index              4      4  Zero  Lc  milbus.o
+  receive_msg_from_milbus.milbus_msgs_received_index
+                                      4      4  Zero  Lc  milbus.o
+  rejected_tc_cnt                     4      4  Zero  Gb  main.o
+  stderr                              4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  stdin                               4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  stdout                              4      4  Init  Gb  prinops_rtt.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  tc_size                             4      4  Zero  Lc  tc_acceptance.o
+  execution_allowed                   1         Zero  Lc  tc_acceptance.o
+
+Read-only data symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  UnityStrBreaker            0x00001D97          24         Cnst  Lc  unity.o
+  UnityStrDetail1Name        0x00001A6E          10         Cnst  Lc  unity.o
+  UnityStrDetail2Name        0x00001C34          11         Cnst  Lc  unity.o
+  UnityStrElement            0x00001A2A          10         Cnst  Lc  unity.o
+  UnityStrExpected           0x00001BF2          11         Cnst  Lc  unity.o
+  UnityStrFail               0x00001C52           5         Cnst  Gb  unity.o
+  UnityStrNullPointerForActual
+                             0x00001C74          25         Cnst  Lc  unity.o
+  UnityStrNullPointerForExpected
+                             0x00001C57          29         Cnst  Lc  unity.o
+  UnityStrOk                 0x00001BEF           3         Cnst  Gb  unity.o
+  UnityStrPass               0x00001C4D           5         Cnst  Gb  unity.o
+  UnityStrPointless          0x00001BFD          55         Cnst  Lc  unity.o
+  UnityStrResultsFailures    0x00001C42          11         Cnst  Lc  unity.o
+  UnityStrResultsIgnored     0x00001AD2          10         Cnst  Lc  unity.o
+  UnityStrResultsTests       0x00001DAF           8         Cnst  Lc  unity.o
+  UnityStrSpacer             0x00001C3F           3         Cnst  Lc  unity.o
+  UnityStrWas                0x000019BE           6         Cnst  Lc  unity.o
+  _DoInit._aInitStr          0x00001C8D          17         Cnst  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  __SEGGER_init_data__       0x00001DD8        [12]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_table__      0x00001DB8        [32]      4  Cnst  Lc  [ Linker created ]
+
+Read-only data symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x000019BE  UnityStrWas                         6         Cnst  Lc  unity.o
+  0x00001A2A  UnityStrElement                    10         Cnst  Lc  unity.o
+  0x00001A6E  UnityStrDetail1Name                10         Cnst  Lc  unity.o
+  0x00001AD2  UnityStrResultsIgnored             10         Cnst  Lc  unity.o
+  0x00001BEF  UnityStrOk                          3         Cnst  Gb  unity.o
+  0x00001BF2  UnityStrExpected                   11         Cnst  Lc  unity.o
+  0x00001BFD  UnityStrPointless                  55         Cnst  Lc  unity.o
+  0x00001C34  UnityStrDetail2Name                11         Cnst  Lc  unity.o
+  0x00001C3F  UnityStrSpacer                      3         Cnst  Lc  unity.o
+  0x00001C42  UnityStrResultsFailures            11         Cnst  Lc  unity.o
+  0x00001C4D  UnityStrPass                        5         Cnst  Gb  unity.o
+  0x00001C52  UnityStrFail                        5         Cnst  Gb  unity.o
+  0x00001C57  UnityStrNullPointerForExpected
+                                                 29         Cnst  Lc  unity.o
+  0x00001C74  UnityStrNullPointerForActual
+                                                 25         Cnst  Lc  unity.o
+  0x00001C8D  _DoInit._aInitStr                  17         Cnst  Lc  SEGGER_RTT.o (prinops_rtt_v7em_t_le_eabi_balanced.a)
+  0x00001D97  UnityStrBreaker                    24         Cnst  Lc  unity.o
+  0x00001DAF  UnityStrResultsTests                8         Cnst  Lc  unity.o
+  0x00001DB8  __SEGGER_init_table__            [32]      4  Cnst  Lc  [ Linker created ]
+  0x00001DD8  __SEGGER_init_data__             [12]      4  Cnst  Lc  [ Linker created ]
+
+Untyped symbols by name:
+
+  Symbol name                     Value        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  __FLASH1_segment_end__     0x00200000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_size__    0x00200000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_start__   0x00000000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_used_end__
+                             0x00001E0A                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_used_size__
+                             0x00001E0A                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_used_start__
+                             0x00000000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_end__      0x00200000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_size__     0x00200000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_start__    0x00000000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_end__
+                             0x00001E0A                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_size__
+                             0x00001E0A                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_start__
+                             0x00000000                     ----  Gb  [ Linker created ]
+  __HEAPSIZE__               0x00000800                     ----  Gb  [ Linker created ]
+  __RAM1_segment_end__       0x20030000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_size__      0x00040000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_start__     0x1FFF0000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_used_end__  0x20030000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_used_size__
+                             0x00040000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_used_start__
+                             0x1FFF0000                     ----  Gb  [ Linker created ]
+  __RAM_segment_end__        0x20030000                     ----  Gb  [ Linker created ]
+  __RAM_segment_size__       0x00040000                     ----  Gb  [ Linker created ]
+  __RAM_segment_start__      0x1FFF0000                     ----  Gb  [ Linker created ]
+  __RAM_segment_used_end__   0x20030000                     ----  Gb  [ Linker created ]
+  __RAM_segment_used_size__  0x00040000                     ----  Gb  [ Linker created ]
+  __RAM_segment_used_start__
+                             0x1FFF0000                     ----  Gb  [ Linker created ]
+  __STACKSIZE_PROCESS__      0x00000000                     ----  Gb  [ Linker created ]
+  __STACKSIZE__              0x00000800                     ----  Gb  [ Linker created ]
+  __stack_end__              0x20030000                     ----  Gb  [ Linker created ]
+  __thread_pointer$          0x00000000                     ----  Gb  [ Linker created ]
+  _vectors                   0x00000000          64      4  Cnst  Gb  Cortex_M_Startup.o
+  _vectors_end               0x00000040                  4  Cnst  Lc  Cortex_M_Startup.o
+
+Untyped symbols by address:
+
+       Value  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000000  _vectors                           64      4  Cnst  Gb  Cortex_M_Startup.o
+  0x00000000  __thread_pointer$                             ----  Gb  [ Linker created ]
+  0x00000000  __STACKSIZE_PROCESS__                         ----  Gb  [ Linker created ]
+  0x00000000  __FLASH_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x00000000  __FLASH_segment_start__                       ----  Gb  [ Linker created ]
+  0x00000000  __FLASH1_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x00000000  __FLASH1_segment_start__                      ----  Gb  [ Linker created ]
+  0x00000040  _vectors_end                               4  Cnst  Lc  Cortex_M_Startup.o
+  0x00000800  __STACKSIZE__                                 ----  Gb  [ Linker created ]
+  0x00000800  __HEAPSIZE__                                  ----  Gb  [ Linker created ]
+  0x00001E0A  __FLASH_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00001E0A  __FLASH_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x00001E0A  __FLASH1_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00001E0A  __FLASH1_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x00040000  __RAM_segment_used_size__                     ----  Gb  [ Linker created ]
+  0x00040000  __RAM_segment_size__                          ----  Gb  [ Linker created ]
+  0x00040000  __RAM1_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00040000  __RAM1_segment_size__                         ----  Gb  [ Linker created ]
+  0x00200000  __FLASH_segment_size__                        ----  Gb  [ Linker created ]
+  0x00200000  __FLASH_segment_end__                         ----  Gb  [ Linker created ]
+  0x00200000  __FLASH1_segment_size__                       ----  Gb  [ Linker created ]
+  0x00200000  __FLASH1_segment_end__                        ----  Gb  [ Linker created ]
+  0x1FFF0000  __RAM_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x1FFF0000  __RAM_segment_start__                         ----  Gb  [ Linker created ]
+  0x1FFF0000  __RAM1_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x1FFF0000  __RAM1_segment_start__                        ----  Gb  [ Linker created ]
+  0x20030000  __stack_end__                                 ----  Gb  [ Linker created ]
+  0x20030000  __RAM_segment_used_end__                      ----  Gb  [ Linker created ]
+  0x20030000  __RAM_segment_end__                           ----  Gb  [ Linker created ]
+  0x20030000  __RAM1_segment_used_end__                     ----  Gb  [ Linker created ]
+  0x20030000  __RAM1_segment_end__                          ----  Gb  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                      LINK SUMMARY                                       ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory breakdown:
+
+    5 952 bytes read-only  code    + 
+    1 737 bytes read-only  data    =   7 689 bytes read-only (total)
+   27 125 bytes read-write data
+
+Region summary:
+
+  Name        Range                     Size                 Used               Unused       Alignment Loss
+  ----------  -----------------  -----------  -------------------  -------------------  -------------------
+  FLASH       00000000-001fffff    2 097 152        7 689   0.37%    2 089 463  99.63%            0   0.00%
+  RAM         1fff0000-2002ffff      262 144       27 125  10.35%      235 019  89.65%            0   0.00%
+
+Link complete: 0 errors, 0 warnings, 0 remarks
